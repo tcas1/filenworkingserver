@@ -35,7 +35,7 @@ const askQuestion = (query) => {
     });
 
     const hostname = "0.0.0.0";
-    const port = process.env.PORT || 1900;
+    const port = process.env.PORT || 80;
     const https = false; // Use 'true' instead of 'True'
 
     // Initialize the WebDAV server
@@ -50,6 +50,7 @@ const askQuestion = (query) => {
             sdk: filen,
         },
         authMode: "basic",
+        root: "joplinnotes",
     });
 
     try {
